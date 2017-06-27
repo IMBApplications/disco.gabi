@@ -9,4 +9,4 @@ pip3 install -r requirements.txt
 ```
 
 ### Resources
-* Discord library used: https://github.com/Rapptz/discord.py
+* Discord library used: https://github.com/b1naryth1ef/disco

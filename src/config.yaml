@@ -1,5 +1,5 @@
-token: 'MY_BOT_TOKEN_HERE'
+token: 'MzI5MzI4MzEzMTQxMTY2MDgy.DDQ2bQ.kK7tE-HrtGUK5DufGR_v1TruCzo'
 
 bot:
   plugins:
-    - plugins.gabi
+    - plugins.smalltalk

@@ -5,6 +5,7 @@ class Development(Plugin):
     @Plugin.command('pull')
     def on_pull_command(self, event):
         import git
+        import os
 
         appRoot = os.path.dirname(os.path.abspath(__file__))
         g = git.cmd.Git(appRoot)

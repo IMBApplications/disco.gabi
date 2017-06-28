@@ -18,9 +18,9 @@ class Development(Plugin):
 
         event.msg.reply(ret)
 
-    @Plugin.command('restart')
-    def on_restart_command(self, event):
+    @Plugin.command('exit')
+    def on_exit_command(self, event):
         import sys
 
-        event.msg.reply('restarting...')
+        event.msg.reply('exiting...')
         sys.exit(0)

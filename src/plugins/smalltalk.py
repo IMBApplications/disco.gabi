@@ -29,9 +29,5 @@ class Smalltalk(Plugin):
     #     else:
     #         self.send_simple_reply(mess, _('Groovy? Did i hear groovy? I am groovy!'))
 
-
-
-
-
-        if ret_message:
-            event.channel.send_message(ret_message)
+    # if ret_message:
+    #     event.channel.send_message(ret_message)

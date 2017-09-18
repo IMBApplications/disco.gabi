@@ -13,7 +13,7 @@ def disco_gabi():
 
     from src.disco_util.disco_listener import start_disco_listener
 
-    start_disco_listener(args, [ShitCommand(), AidsCommand(), SihCommand(), GroovyCommand()])
+    start_disco_listener(args, [ShitCommand(), AidsCommand(), SihCommand(), GroovyCommand(), RollCommand(), ImbaCommand()])
 
 
 def parse_arguments():

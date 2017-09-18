@@ -1,36 +1,18 @@
 import argparse
-import os
-import logging
-from disco.client import Client, ClientConfig
-from disco.bot import Bot, BotConfig
-from disco.util.token import is_valid_token
-from disco.util.logging import setup_logging
+
+from src.gabi.hate import ShitCommand, AidsCommand, SihCommand
+
+from gevent import monkey
+
+monkey.patch_all()
 
 
 def disco_gabi():
     args = parse_arguments()
 
-    if os.path.exists(args.config):
-        config = ClientConfig.from_file(args.config)
-    else:
-        config = ClientConfig()
+    from src.disco_util.disco_listener import start_disco_listener
 
-    if not is_valid_token(config.token):
-        print('Invalid token passed')
-        return
-
-    setup_logging(level=getattr(logging, config.log_level.upper()))
-
-    client = Client(config)
-
-    bot_config = BotConfig(config.bot) if hasattr(config, 'bot') else BotConfig()
-    if not hasattr(bot_config, 'plugins'):
-        bot_config.plugins = args.plugin
-    else:
-        bot_config.plugins += args.plugin
-
-    bot = Bot(client, bot_config)
-    bot.run_forever()
+    start_disco_listener(args, [ShitCommand(), AidsCommand(), SihCommand()])
 
 
 def parse_arguments():

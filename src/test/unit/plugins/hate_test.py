@@ -1,7 +1,7 @@
 import unittest
 
 from src.gabi.hate import ShitCommand, AidsCommand, SihCommand
-from src.gabi.ChatMessage import ChatMessage
+from src.gabi.core import ChatMessage
 
 
 class TestShitCommand(unittest.TestCase):

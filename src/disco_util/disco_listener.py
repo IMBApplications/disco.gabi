@@ -5,8 +5,7 @@ from disco.bot import Plugin, BotConfig, Bot
 from disco.client import Client, ClientConfig
 from disco.util.logging import setup_logging
 
-from src.gabi.ChatMessage import ChatMessage
-from src.gabi.ChatCommand import ChatCommand
+from src.gabi.core import ChatMessage, ChatCommand
 
 
 def start_disco_listener(args, commands):

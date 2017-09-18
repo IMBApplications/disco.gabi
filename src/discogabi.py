@@ -1,6 +1,7 @@
 import argparse
 
-from src.gabi.hate import ShitCommand, AidsCommand, SihCommand
+from src.gabi.hate import *
+from src.gabi.fun import *
 
 from gevent import monkey
 
@@ -12,7 +13,7 @@ def disco_gabi():
 
     from src.disco_util.disco_listener import start_disco_listener
 
-    start_disco_listener(args, [ShitCommand(), AidsCommand(), SihCommand()])
+    start_disco_listener(args, [ShitCommand(), AidsCommand(), SihCommand(), GroovyCommand()])
 
 
 def parse_arguments():

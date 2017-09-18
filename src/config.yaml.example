@@ -2,6 +2,5 @@ token: 'MY_BOT_TOKEN_HERE'
 
 bot:
   plugins:
-    - plugins.smalltalk
     - plugins.development
     - plugins.birthdays

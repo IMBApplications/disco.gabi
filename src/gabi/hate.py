@@ -1,7 +1,5 @@
 from src.gabi.core import *
 
-from src.gabi.utils import user_targetet_reply
-
 
 class ShitCommand(ChatCommand):
     def __init__(self):

@@ -1,2 +1,5 @@
 disco-py
 GitPython
+pyyaml
+pytest
+pytest-cov

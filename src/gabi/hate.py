@@ -1,4 +1,6 @@
-from src.gabi.core import ChatMessage, ChatCommand
+from src.gabi.core import *
+
+from src.gabi.utils import user_targetet_reply
 
 
 class ShitCommand(ChatCommand):

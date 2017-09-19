@@ -1,18 +1,15 @@
-from src.gabi.core import ChatMessage, ChatCommand
-
 import random
+
+from src.gabi.core import ChatMessage, ChatCommand
+from src.gabi.utils import user_targetet_reply
+
 
 class GroovyCommand(ChatCommand):
     def __init__(self):
         ChatCommand.__init__(self, "groovy")
 
     def on_execute(self, msg: ChatMessage):
-        if len(msg.msg) > 0:
-            response = 'Groovy? Did i hear groovy? {0} is groovy!'.format(msg.msg)
-        else:
-            response = 'Groovy? Did i hear groovy? I am groovy!'
-
-        msg.reply(response)
+        user_targetet_reply('Groovy? Did i hear groovy? {0} is groovy!', 'Groovy? Did i hear groovy? I am groovy!', msg)
 
 
 class RollCommand(ChatCommand):
@@ -33,9 +30,4 @@ class ImbaCommand(ChatCommand):
         ChatCommand.__init__(self, "imba")
 
     def on_execute(self, msg: ChatMessage):
-        if len(msg.msg) > 0:
-            response = '{0} is IMBA!'.format(msg.msg)
-        else:
-            response = 'I am IMBA!'
-
-        msg.reply(str(response))
+        user_targetet_reply('{0} is IMBA!', 'I am IMBA!', msg)
